@@ -2,7 +2,7 @@ import React from 'react'
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js'
 import ChargeService from '../services/charge-service';
 
-const CheckoutForm = () => {
+const CheckoutForm = (props) => {
     const stripe = useStripe();
     const elements = useElements();
 

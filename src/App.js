@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react'
-import logo from './logo.svg';
+import React, { useState } from 'react'
 
 import HomePage from './components/HomePage.js'
 import Elearning from './components/Elearning'
@@ -15,18 +14,14 @@ import './App.css';
 import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';
 import { DiAtom } from "react-icons/di"
 import { GiHamburgerMenu } from 'react-icons/gi'
-import { AiOutlineUser } from "react-icons/ai";
-import { Dropdown } from 'semantic-ui-react'
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
 import { withStyles } from '@material-ui/core/styles';
 
-import { Table, Flag } from 'semantic-ui-react'
+import { Flag } from 'semantic-ui-react'
 import { useTranslation } from "react-i18next";
-import i18n from "./i18n";
 
 import { createBrowserHistory } from 'history'
 
@@ -79,7 +74,7 @@ function App() {
 
   const handleClick = (event) => {
     // console.log(event.currentTarget.id)
-    if (event.currentTarget.id == "lang-button") {
+    if (event.currentTarget.id === "lang-button") {
       setAnchorEl(event.currentTarget);
     }
     else
@@ -93,11 +88,11 @@ function App() {
   };
 
   const handleLang = (event) => {
-    if (event.target.alt == 'France') {
+    if (event.target.alt === 'France') {
       setLang("FR");
       i18n.changeLanguage("fr");
     }
-    else if (event.target.alt == 'GB') {
+    else if (event.target.alt === 'GB') {
       setLang("ENG");
       i18n.changeLanguage("eng")
     }
